@@ -32,7 +32,7 @@ public:
 
     MyString(const char* data){
         const size_t dataLength = strlen(data);
-        while (dataLength > capacity)
+        while (dataLength >= capacity)
         {
             capacity *= 2;  // На самом деле string в с++ работает таким образом. По степени двойки начиная с 16. Capacity у него 16, 32, 64 и так растёт(по геометрической прогрессии).
         }
